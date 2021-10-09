@@ -1,13 +1,13 @@
-Configure miss: jpeg_read_header in -ljpeg
-Configure miss: if JPEG package is complete
-Configure miss: compress in -lz
-Configure miss: uncompress in -lz
-Configure miss: deflate in -lz
-Configure miss: inflate in -lz
-Configure miss: gzseek in -lz
-Configure miss: gztell in -lz
-Configure miss: if ZLIB package is complete
-Configure miss: TIFFOpen in -ltiff
 Configure miss: TIFFClientOpen in -ltiff
 Configure miss: TIFFIsByteSwapped in -ltiff
+Configure miss: TIFFOpen in -ltiff
+Configure miss: compress in -lz
+Configure miss: deflate in -lz
+Configure miss: gzseek in -lz
+Configure miss: gztell in -lz
+Configure miss: if JPEG package is complete
 Configure miss: if TIFF package is complete
+Configure miss: if ZLIB package is complete
+Configure miss: inflate in -lz
+Configure miss: jpeg_read_header in -ljpeg
+Configure miss: uncompress in -lz

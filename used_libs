@@ -1,5 +1,5 @@
 libc.so.6
 libjpeg.so.62
 libm.so.6
-libpthread.so.0
+libmvec.so.1
 libtiff.so.5

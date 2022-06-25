@@ -4,7 +4,7 @@
 #
 Name     : lcms2
 Version  : 2.9
-Release  : 19
+Release  : 20
 URL      : https://github.com/mm2/Little-CMS/archive/lcms2.9.tar.gz
 Source0  : https://github.com/mm2/Little-CMS/archive/lcms2.9.tar.gz
 Summary  : LCMS Color Management Library
@@ -122,7 +122,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656044921
+export SOURCE_DATE_EPOCH=1656128630
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -165,7 +165,7 @@ cd ../buildavx2;
 make %{?_smp_mflags} check || : || :
 
 %install
-export SOURCE_DATE_EPOCH=1656044921
+export SOURCE_DATE_EPOCH=1656128630
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lcms2
 cp %{_builddir}/Little-CMS-lcms2.9/COPYING %{buildroot}/usr/share/package-licenses/lcms2/f595de201a37b00737678b96b4c4a10d5bc5f6d9

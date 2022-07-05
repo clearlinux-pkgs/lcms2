@@ -1,6 +1,5 @@
-2.9
+2.13.1
 libjpeg-turbo-dev
 pkgconfig(zlib)
 tiff-dev
-util-linux
 zlib-dev

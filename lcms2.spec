@@ -4,7 +4,7 @@
 #
 Name     : lcms2
 Version  : 2.13.1
-Release  : 22
+Release  : 23
 URL      : https://github.com/mm2/Little-CMS/releases/download/lcms2.13.1/lcms2-2.13.1.tar.gz
 Source0  : https://github.com/mm2/Little-CMS/releases/download/lcms2.13.1/lcms2-2.13.1.tar.gz
 Summary  : LCMS Color Management Library

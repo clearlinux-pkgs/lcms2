@@ -4,7 +4,7 @@
 #
 Name     : lcms2
 Version  : 2.13.1
-Release  : 25
+Release  : 26
 URL      : https://github.com/mm2/Little-CMS/releases/download/lcms2.13.1/lcms2-2.13.1.tar.gz
 Source0  : https://github.com/mm2/Little-CMS/releases/download/lcms2.13.1/lcms2-2.13.1.tar.gz
 Summary  : LCMS Color Management Library
@@ -121,15 +121,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1657062582
+export SOURCE_DATE_EPOCH=1664934915
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -Ofast -falign-functions=32 -ffat-lto-objects -flto=auto -fno-semantic-interposition -fstack-protector-strong -fzero-call-used-regs=used -mprefer-vector-width=256 "
-export FCFLAGS="$FFLAGS -O3 -Ofast -falign-functions=32 -ffat-lto-objects -flto=auto -fno-semantic-interposition -fstack-protector-strong -fzero-call-used-regs=used -mprefer-vector-width=256 "
-export FFLAGS="$FFLAGS -O3 -Ofast -falign-functions=32 -ffat-lto-objects -flto=auto -fno-semantic-interposition -fstack-protector-strong -fzero-call-used-regs=used -mprefer-vector-width=256 "
-export CXXFLAGS="$CXXFLAGS -O3 -Ofast -falign-functions=32 -ffat-lto-objects -flto=auto -fno-semantic-interposition -fstack-protector-strong -fzero-call-used-regs=used -mprefer-vector-width=256 "
+export CFLAGS="$CFLAGS -O3 -Ofast -falign-functions=32 -ffat-lto-objects -flto=auto -fno-semantic-interposition -mprefer-vector-width=256 "
+export FCFLAGS="$FFLAGS -O3 -Ofast -falign-functions=32 -ffat-lto-objects -flto=auto -fno-semantic-interposition -mprefer-vector-width=256 "
+export FFLAGS="$FFLAGS -O3 -Ofast -falign-functions=32 -ffat-lto-objects -flto=auto -fno-semantic-interposition -mprefer-vector-width=256 "
+export CXXFLAGS="$CXXFLAGS -O3 -Ofast -falign-functions=32 -ffat-lto-objects -flto=auto -fno-semantic-interposition -mprefer-vector-width=256 "
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -164,12 +164,12 @@ cd ../buildavx2;
 make %{?_smp_mflags} check || : || :
 
 %install
-export SOURCE_DATE_EPOCH=1657062582
+export SOURCE_DATE_EPOCH=1664934915
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lcms2
-cp %{_builddir}/lcms2-2.13.1/COPYING %{buildroot}/usr/share/package-licenses/lcms2/9baf05cabbfd71f06534e5597170a2b7c817e6ad
-cp %{_builddir}/lcms2-2.13.1/plugins/fast_float/COPYING.GPL3 %{buildroot}/usr/share/package-licenses/lcms2/1de7bacb4fbbd7b6d391a69abfe174c2509ec303
-cp %{_builddir}/lcms2-2.13.1/utils/jpgicc/LICENSE_iccjpeg %{buildroot}/usr/share/package-licenses/lcms2/0ff27b2ad965b91dda6bd751b541edd707f56fbd
+cp %{_builddir}/lcms2-%{version}/COPYING %{buildroot}/usr/share/package-licenses/lcms2/9baf05cabbfd71f06534e5597170a2b7c817e6ad || :
+cp %{_builddir}/lcms2-%{version}/plugins/fast_float/COPYING.GPL3 %{buildroot}/usr/share/package-licenses/lcms2/1de7bacb4fbbd7b6d391a69abfe174c2509ec303 || :
+cp %{_builddir}/lcms2-%{version}/utils/jpgicc/LICENSE_iccjpeg %{buildroot}/usr/share/package-licenses/lcms2/0ff27b2ad965b91dda6bd751b541edd707f56fbd || :
 pushd ../build32/
 %make_install32
 if [ -d  %{buildroot}/usr/lib32/pkgconfig ]

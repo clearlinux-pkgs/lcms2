@@ -5,7 +5,7 @@
 #
 Name     : lcms2
 Version  : 2.14
-Release  : 29
+Release  : 30
 URL      : https://github.com/mm2/Little-CMS/releases/download/lcms2.14/lcms2-2.14.tar.gz
 Source0  : https://github.com/mm2/Little-CMS/releases/download/lcms2.14/lcms2-2.14.tar.gz
 Summary  : LCMS Color Management Library
@@ -114,7 +114,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682991969
+export SOURCE_DATE_EPOCH=1685635235
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -157,7 +157,7 @@ cd ../buildavx2;
 make %{?_smp_mflags} check || : || :
 
 %install
-export SOURCE_DATE_EPOCH=1682991969
+export SOURCE_DATE_EPOCH=1685635235
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lcms2
 cp %{_builddir}/lcms2-%{version}/COPYING %{buildroot}/usr/share/package-licenses/lcms2/9baf05cabbfd71f06534e5597170a2b7c817e6ad || :
@@ -203,7 +203,6 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/V3/usr/lib64/liblcms2.so
 /usr/include/lcms2.h
 /usr/include/lcms2_plugin.h
 /usr/lib64/liblcms2.so
@@ -217,7 +216,6 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/liblcms2.so.2
 /V3/usr/lib64/liblcms2.so.2.0.14
 /usr/lib64/liblcms2.so.2
 /usr/lib64/liblcms2.so.2.0.14
